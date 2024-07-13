@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:task/model/prouductresponse.dart';
 import 'package:task/screen/widget/apploader.dart';
+import '../../constant/app-assets.dart';
 import '../../constant/app-color.dart';
 
 class ProductWidget extends StatefulWidget {
@@ -56,7 +57,7 @@ class ProductState extends State<ProductWidget> {
                 right: 0,
                 child: IconButton(
                   icon: Image.asset(
-                    isFavorite ? "assets/images/fav.png" : "assets/images/isfav.png",
+                    isFavorite ? AppAssets.truefave : AppAssets.falsefave,
                   ),
                   onPressed: toggleFavorite,
                 ),

@@ -5,6 +5,7 @@ import 'package:task/di.dart';
 import 'package:task/screen/task-screen/taskscreen-viewmodel.dart';
 import 'package:task/screen/widget/apploader.dart';
 import 'package:task/screen/widget/errorviwe.dart';
+import '../../constant/app-assets.dart';
 import '../../model/prouductresponse.dart';
 import '../widget/proudect-widegt.dart';
 import 'base/enums/base-screen-state.dart'; // Adjust import path as needed
@@ -34,7 +35,7 @@ class _TaskScreenState extends State<TaskScreen> {
       appBar: AppBar(
         backgroundColor: Appcolor.whitecolor,
         elevation: 0,
-        title: Image.asset("assets/images/route.png"),
+        title: Image.asset(AppAssets.route),
       ),
       body: Column(
         children: [

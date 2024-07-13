@@ -21,7 +21,7 @@ class ErrorVeiw extends StatelessWidget {
             onPressed: () {
               refresh?.call();
             },
-            child: Text("Refresh"),
+            child: const Text("Refresh"),
           ),
         ),
       ],
