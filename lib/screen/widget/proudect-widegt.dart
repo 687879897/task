@@ -16,10 +16,7 @@ class ProductWidget extends StatefulWidget {
 
 class ProductState extends State<ProductWidget> {
   bool isFavorite = false; // State to manage favorite status
-
   bool isExpanded = false; // State to manage expanded/collapsed state
-
-
 
   void toggleFavorite() {
     setState(() {
@@ -30,10 +27,9 @@ class ProductState extends State<ProductWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 6,right: 6,top: 3,bottom: 6),
+      padding: const EdgeInsets.only(left: 6, right: 6, top: 3, bottom: 6),
       height: 200,
-
-      margin: const EdgeInsets.only(left: 6,right: 6,top: 3,bottom: 6),
+      margin: const EdgeInsets.only(left: 6, right: 6, top: 3, bottom: 6),
       decoration: BoxDecoration(
         border: Border.all(color: Appcolor.bluecolor),
         borderRadius: BorderRadius.circular(13),
@@ -50,7 +46,7 @@ class ProductState extends State<ProductWidget> {
                 errorWidget: (_, __, ___) => const Icon(Icons.error),
                 width: double.infinity,
                 fit: BoxFit.cover,
-                height: MediaQuery.of(context).size.height * .16
+                height: MediaQuery.of(context).size.height * .16,
               ),
               Positioned(
                 top: 0,
@@ -62,7 +58,6 @@ class ProductState extends State<ProductWidget> {
                   onPressed: toggleFavorite,
                 ),
               ),
-
             ],
           ),
           const Spacer(),
@@ -72,7 +67,22 @@ class ProductState extends State<ProductWidget> {
             maxLines: 2,
             style: const TextStyle(height: 1),
           ),
-           const Spacer(),
+          const Spacer(),
+          Row(
+            children: [
+              Text("EGP ${widget.products.price}"),
+              const Spacer(),
+              Text(
+                " ${(widget.products.price! / (1 - (widget.products.discountPercentage!.toDouble() / 100))).toStringAsFixed(2)}EGP",
+                style:  TextStyle(
+                  decoration: TextDecoration.lineThrough,
+                  color: Appcolor.bluecolor,
+                  fontSize: 13
+                ),
+              ),
+            ],
+          ),
+          const Spacer(),
           Row(
             children: [
               Text("Review(${widget.products.rating})"),
@@ -80,13 +90,6 @@ class ProductState extends State<ProductWidget> {
                 Icons.star,
                 color: Colors.amberAccent,
               ),
-            ],
-          ),
-          const Spacer(),
-
-          Row(
-            children: [
-              Text("EGP ${widget.products.price}"),
               const Spacer(),
               SizedBox(
                 width: 30,
@@ -95,7 +98,7 @@ class ProductState extends State<ProductWidget> {
                   backgroundColor: Appcolor.bluecolor,
                   onPressed: () {
                     setState(() {
-                      isExpanded=!isExpanded;
+                      isExpanded = !isExpanded;
                     });
                   },
                   child: Icon(
@@ -110,4 +113,6 @@ class ProductState extends State<ProductWidget> {
       ),
     );
   }
+
+
 }
