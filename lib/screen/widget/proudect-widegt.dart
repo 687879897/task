@@ -27,9 +27,9 @@ class ProductState extends State<ProductWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 6, right: 6, top: 3, bottom: 6),
+      padding: const EdgeInsets.only(left: 6, top: 3, bottom: 6),
       height: 200,
-      margin: const EdgeInsets.only(left: 6, right: 6, top: 3, bottom: 6),
+      margin: const EdgeInsets.only(left: 6, top: 3, bottom: 6),
       decoration: BoxDecoration(
         border: Border.all(color: Appcolor.bluecolor),
         borderRadius: BorderRadius.circular(13),

@@ -111,7 +111,7 @@ class _TaskScreenState extends State<TaskScreen> {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 0.7, // Adjust aspect ratio as needed
-          crossAxisSpacing: 8,
+          crossAxisSpacing: 4,
           mainAxisSpacing: 8,
         ),
         itemCount: data.length,
