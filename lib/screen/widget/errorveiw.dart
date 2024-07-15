@@ -2,14 +2,14 @@
 import 'package:flutter/material.dart';
 
 class ErrorVeiw extends StatelessWidget {
-   ErrorVeiw({
+  const ErrorVeiw({
     super.key,
     required this.error,
     required this.refresh
   });
 
   final String error;
- final Function? refresh;
+  final Function? refresh;
 
   @override
   Widget build(BuildContext context) {

@@ -3,11 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task/constant/app-color.dart';
 import 'package:task/di.dart';
 import 'package:task/screen/task-screen/taskscreen-viewmodel.dart';
-import 'package:task/screen/widget/apploader.dart';
-import 'package:task/screen/widget/errorviwe.dart';
+
 import '../../constant/app-assets.dart';
 import '../../model/prouductresponse.dart';
-import '../widget/proudect-widegt.dart';
+import '../widget/app-loader.dart';
+import '../widget/errorveiw.dart';
+import '../widget/product.dart';
 import 'base/enums/base-screen-state.dart'; // Adjust import path as needed
 
 class TaskScreen extends StatefulWidget {

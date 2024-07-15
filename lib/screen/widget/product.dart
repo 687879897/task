@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:task/model/prouductresponse.dart';
-import 'package:task/screen/widget/apploader.dart';
 import '../../constant/app-assets.dart';
 import '../../constant/app-color.dart';
+import 'app-loader.dart';
 
 class ProductWidget extends StatefulWidget {
   final Products products;
@@ -27,9 +27,9 @@ class ProductState extends State<ProductWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 6, right: 6, top: 3, bottom: 6),
+      padding: const EdgeInsets.only(left: 6, top: 3, bottom: 6),
       height: 200,
-      margin: const EdgeInsets.only(left: 6, right: 6, top: 3, bottom: 6),
+      margin: const EdgeInsets.only(left: 6, top: 3, bottom: 6),
       decoration: BoxDecoration(
         border: Border.all(color: Appcolor.bluecolor),
         borderRadius: BorderRadius.circular(13),
@@ -75,9 +75,9 @@ class ProductState extends State<ProductWidget> {
               Text(
                 " ${(widget.products.price! / (1 - (widget.products.discountPercentage!.toDouble() / 100))).toStringAsFixed(2)}EGP",
                 style:  TextStyle(
-                  decoration: TextDecoration.lineThrough,
-                  color: Appcolor.bluecolor,
-                  fontSize: 13
+                    decoration: TextDecoration.lineThrough,
+                    color: Appcolor.bluecolor,
+                    fontSize: 13
                 ),
               ),
             ],
